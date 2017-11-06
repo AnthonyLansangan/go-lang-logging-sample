@@ -1,3 +1,4 @@
+//This provides a sample on how to use lumberjack
 package main
 
 import (

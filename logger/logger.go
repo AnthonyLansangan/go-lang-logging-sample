@@ -1,3 +1,4 @@
+//This package utilizes the use of lumberjack
 package logger
 
 import (
@@ -14,6 +15,7 @@ var (
 	fatal   *log.Logger
 )
 
+//Setup log configuration
 func init() {
 	rollingSetings := &lumberjack.Logger{
 		Filename: "sample.log",
@@ -44,22 +46,27 @@ func init() {
 
 }
 
+//Prints Trace level log
 func Trace(v ...interface{}) {
 	trace.Println(getCaller(), v)
 }
 
+//Prints Info level log
 func Info(v ...interface{}) {
 	info.Println(getCaller(), v)
 }
 
+//Prints Warning level log
 func Warning(v ...interface{}) {
 	warning.Println(getCaller(), v)
 }
 
+//Prints Error level log
 func Error(v ...interface{}) {
 	errs.Println(getCaller(), v)
 }
 
+//Prints Fatal level log
 func Fatal(v ...interface{}) {
 	fatal.Fatalln(getCaller(), v)
 }
