@@ -1,11 +1,11 @@
 package main
 
 import (
-	"lumberjack_sample/logger"
 	"errors"
+	"lumberjack_sample/logger"
 )
 
-func main ()  {
+func main() {
 
 	logger.Info("This is a sample log")
 	logger.Warning("Warning log")

@@ -7,18 +7,18 @@ import (
 )
 
 var (
-	trace           *log.Logger
-	info            *log.Logger
-	warning         *log.Logger
-	errs            *log.Logger
-	fatal           *log.Logger
+	trace   *log.Logger
+	info    *log.Logger
+	warning *log.Logger
+	errs    *log.Logger
+	fatal   *log.Logger
 )
 
 func init() {
 	rollingSetings := &lumberjack.Logger{
 		Filename: "sample.log",
 		MaxSize:  1000, // megabytes
-		MaxAge:   30,  //days
+		MaxAge:   30,   //days
 		Compress: true,
 	}
 
